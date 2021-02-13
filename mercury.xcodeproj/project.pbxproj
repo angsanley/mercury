@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		505C110825DC0FE50036BEE4 /* Newsreader-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */; };
 		50994CF225D6E4B30077264D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF125D6E4B30077264D /* AppDelegate.swift */; };
 		50994CF425D6E4B30077264D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF325D6E4B30077264D /* SceneDelegate.swift */; };
 		50994CF625D6E4B30077264D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF525D6E4B30077264D /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Newsreader-Regular.ttf"; sourceTree = "<group>"; };
 		50994CEE25D6E4B30077264D /* mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50994CF125D6E4B30077264D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50994CF325D6E4B30077264D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		505C110525DC0FE50036BEE4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50994D0125D6E4B50077264D /* LaunchScreen.storyboard in Resources */,
+				505C110825DC0FE50036BEE4 /* Newsreader-Regular.ttf in Resources */,
 				50994CFE25D6E4B50077264D /* Assets.xcassets in Resources */,
 				50994CF925D6E4B30077264D /* Main.storyboard in Resources */,
 			);
