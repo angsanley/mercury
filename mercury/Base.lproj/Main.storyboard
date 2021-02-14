@@ -19,7 +19,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="GUd-6p-JKp"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="GUd-6p-JKp"/>
                     <navigationItem key="navigationItem" id="D8U-wV-Ggu"/>
                 </viewController>
             </objects>
@@ -35,7 +35,7 @@
                         <viewLayoutGuide key="safeArea" id="2B9-8J-vy5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="9f3-SO-fMO"/>
+                    <tabBarItem key="tabBarItem" title="Favorite Words" image="heart" catalog="system" id="9f3-SO-fMO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9x-g8-lXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
                         <viewLayoutGuide key="safeArea" id="Nbb-NI-0b8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="KGa-4u-c1V"/>
+                    <tabBarItem key="tabBarItem" title="Random Words" image="questionmark.circle" catalog="system" id="KGa-4u-c1V"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hW8-RS-NP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,6 +78,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
