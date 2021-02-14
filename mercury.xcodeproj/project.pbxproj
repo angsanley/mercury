@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		505C110825DC0FE50036BEE4 /* Newsreader-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */; };
+		505C110B25DC0FE50036BEE4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 505C110A25DC0FE50036BEE4 /* Podfile */; };
 		50994CF225D6E4B30077264D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF125D6E4B30077264D /* AppDelegate.swift */; };
 		50994CF425D6E4B30077264D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF325D6E4B30077264D /* SceneDelegate.swift */; };
 		50994CF625D6E4B30077264D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF525D6E4B30077264D /* ViewController.swift */; };
@@ -15,10 +16,13 @@
 		50994CFC25D6E4B30077264D /* mercury.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50994CFA25D6E4B30077264D /* mercury.xcdatamodeld */; };
 		50994CFE25D6E4B50077264D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50994CFD25D6E4B50077264D /* Assets.xcassets */; };
 		50994D0125D6E4B50077264D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50994CFF25D6E4B50077264D /* LaunchScreen.storyboard */; };
+		514032FF8B8C8A7316DB9D12 /* libPods-mercury.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31AFDC3B2FCADA59D85E59D4 /* libPods-mercury.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31AFDC3B2FCADA59D85E59D4 /* libPods-mercury.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mercury.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Newsreader-Regular.ttf"; sourceTree = "<group>"; };
+		505C110A25DC0FE50036BEE4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		50994CEE25D6E4B30077264D /* mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50994CF125D6E4B30077264D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50994CF325D6E4B30077264D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		50994CFD25D6E4B50077264D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50994D0025D6E4B50077264D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50994D0225D6E4B50077264D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2ECF3C3E13E11C8AECE11D4 /* Pods-mercury.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercury.release.xcconfig"; path = "Target Support Files/Pods-mercury/Pods-mercury.release.xcconfig"; sourceTree = "<group>"; };
+		D6099FC7564851B939FDC12F /* Pods-mercury.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mercury.debug.xcconfig"; path = "Target Support Files/Pods-mercury/Pods-mercury.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +41,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				514032FF8B8C8A7316DB9D12 /* libPods-mercury.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2BC0B1D0864D510911421D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31AFDC3B2FCADA59D85E59D4 /* libPods-mercury.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		505C110525DC0FE50036BEE4 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,8 +67,11 @@
 		50994CE525D6E4B30077264D = {
 			isa = PBXGroup;
 			children = (
+				505C110A25DC0FE50036BEE4 /* Podfile */,
 				50994CF025D6E4B30077264D /* mercury */,
 				50994CEF25D6E4B30077264D /* Products */,
+				618FEBA3D2C2E4AD3CFF640D /* Pods */,
+				0D2BC0B1D0864D510911421D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +99,16 @@
 			path = mercury;
 			sourceTree = "<group>";
 		};
+		618FEBA3D2C2E4AD3CFF640D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D6099FC7564851B939FDC12F /* Pods-mercury.debug.xcconfig */,
+				D2ECF3C3E13E11C8AECE11D4 /* Pods-mercury.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -88,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 50994D0525D6E4B50077264D /* Build configuration list for PBXNativeTarget "mercury" */;
 			buildPhases = (
+				E0E33E38D439EAF9D29793F6 /* [CP] Check Pods Manifest.lock */,
 				50994CEA25D6E4B30077264D /* Sources */,
 				50994CEB25D6E4B30077264D /* Frameworks */,
 				50994CEC25D6E4B30077264D /* Resources */,
+				42E8D1B8801EDC34286DD2D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				505C110B25DC0FE50036BEE4 /* Podfile in Resources */,
 				50994D0125D6E4B50077264D /* LaunchScreen.storyboard in Resources */,
 				505C110825DC0FE50036BEE4 /* Newsreader-Regular.ttf in Resources */,
 				50994CFE25D6E4B50077264D /* Assets.xcassets in Resources */,
@@ -146,6 +177,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42E8D1B8801EDC34286DD2D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0E33E38D439EAF9D29793F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mercury-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		50994CEA25D6E4B30077264D /* Sources */ = {
@@ -299,6 +372,7 @@
 		};
 		50994D0625D6E4B50077264D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6099FC7564851B939FDC12F /* Pods-mercury.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,6 +392,7 @@
 		};
 		50994D0725D6E4B50077264D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2ECF3C3E13E11C8AECE11D4 /* Pods-mercury.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
