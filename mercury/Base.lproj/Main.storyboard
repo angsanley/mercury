@@ -31,7 +31,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yD-tU-md0">
                                 <rect key="frame" x="0.0" y="104" width="414" height="709"/>
                                 <connections>
-                                    <segue destination="WAa-op-ic7" kind="embed" id="7eo-sF-yXg"/>
+                                    <segue destination="WAa-op-ic7" kind="embed" identifier="wordContainerSegue" id="7eo-sF-yXg"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -50,6 +50,7 @@
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="GUd-6p-JKp"/>
                     <navigationItem key="navigationItem" id="D8U-wV-Ggu"/>
                     <connections>
+                        <outlet property="containerView" destination="4yD-tU-md0" id="tHw-RM-C2X"/>
                         <outlet property="searchBar" destination="mRZ-lv-TRb" id="hRn-1b-UnQ"/>
                     </connections>
                 </viewController>
@@ -76,7 +77,7 @@
         <!--Random-->
         <scene sceneID="R0h-Tr-G4X">
             <objects>
-                <viewController title="Random" id="itg-uE-gJY" sceneMemberID="viewController">
+                <viewController title="Random" id="itg-uE-gJY" customClass="RandomWordViewController" customModule="mercury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i19-1Y-Lup">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,7 +85,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Cc-lw-VZi">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <connections>
-                                    <segue destination="WAa-op-ic7" kind="embed" id="FZF-Og-ycF"/>
+                                    <segue destination="WAa-op-ic7" kind="embed" identifier="wordContainerSegue" id="FZF-Og-ycF"/>
                                 </connections>
                             </containerView>
                         </subviews>

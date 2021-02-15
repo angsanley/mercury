@@ -12,6 +12,7 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleText: UILabel!
+    var theWord: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,5 +39,11 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         cell.showLoadingAnimation()
         
         return cell
+    }
+    
+    public func loadWord(word: String) {
+        tableView.isHidden = false
+        theWord = word
+        titleText.text = theWord
     }
 }
