@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		503DF84225DAB13700418325 /* WordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 503DF84125DAB13700418325 /* WordViewController.swift */; };
 		505C110825DC0FE50036BEE4 /* Newsreader-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */; };
 		505C110B25DC0FE50036BEE4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 505C110A25DC0FE50036BEE4 /* Podfile */; };
 		505F271625DD384700D675CA /* DefinitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F271525DD384700D675CA /* DefinitionTableViewCell.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		31AFDC3B2FCADA59D85E59D4 /* libPods-mercury.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mercury.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		503DF84125DAB13700418325 /* WordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordViewController.swift; sourceTree = "<group>"; };
 		505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Newsreader-Regular.ttf"; sourceTree = "<group>"; };
 		505C110A25DC0FE50036BEE4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		505F271525DD384700D675CA /* DefinitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				50994D0225D6E4B50077264D /* Info.plist */,
 				50994CFA25D6E4B30077264D /* mercury.xcdatamodeld */,
 				505F271525DD384700D675CA /* DefinitionTableViewCell.swift */,
+				503DF84125DAB13700418325 /* WordViewController.swift */,
 			);
 			path = mercury;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				503DF84225DAB13700418325 /* WordViewController.swift in Sources */,
 				50994CF625D6E4B30077264D /* ViewController.swift in Sources */,
 				50994CF225D6E4B30077264D /* AppDelegate.swift in Sources */,
 				505F271625DD384700D675CA /* DefinitionTableViewCell.swift in Sources */,
