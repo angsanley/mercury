@@ -14,30 +14,21 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - Bolts (1.9.1):
-    - Bolts/AppLinks (= 1.9.1)
-    - Bolts/Tasks (= 1.9.1)
-  - Bolts/AppLinks (1.9.1):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.9.1)
-  - FBSDKCoreKit (4.44.1):
-    - Bolts (~> 1.9)
+  - SkeletonView (1.13.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
-  - FBSDKCoreKit (~> 4.9)
+  - SkeletonView
 
 SPEC REPOS:
   trunk:
     - AFNetworking
-    - Bolts
-    - FBSDKCoreKit
+    - SkeletonView
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
-  FBSDKCoreKit: a823ae35bdb60ebb8d7a7e51abe7c5d87d2bfced
+  SkeletonView: 2b14cb767a7da384d17d5d7e1db0d55a6cf9566a
 
-PODFILE CHECKSUM: 164c03f9029f0ced87228752fcde1965153f05ab
+PODFILE CHECKSUM: d5fa24d907de1c312cf42f3826e5c30ca1fa67a3
 
 COCOAPODS: 1.9.3

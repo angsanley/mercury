@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		505C110825DC0FE50036BEE4 /* Newsreader-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */; };
 		505C110B25DC0FE50036BEE4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 505C110A25DC0FE50036BEE4 /* Podfile */; };
+		505F271625DD384700D675CA /* DefinitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F271525DD384700D675CA /* DefinitionTableViewCell.swift */; };
 		50994CF225D6E4B30077264D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF125D6E4B30077264D /* AppDelegate.swift */; };
 		50994CF425D6E4B30077264D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF325D6E4B30077264D /* SceneDelegate.swift */; };
 		50994CF625D6E4B30077264D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF525D6E4B30077264D /* ViewController.swift */; };
@@ -22,7 +23,8 @@
 /* Begin PBXFileReference section */
 		31AFDC3B2FCADA59D85E59D4 /* libPods-mercury.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mercury.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		505C110725DC0FE50036BEE4 /* Newsreader-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Newsreader-Regular.ttf"; sourceTree = "<group>"; };
-		505C110A25DC0FE50036BEE4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		505C110A25DC0FE50036BEE4 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		505F271525DD384700D675CA /* DefinitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionTableViewCell.swift; sourceTree = "<group>"; };
 		50994CEE25D6E4B30077264D /* mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50994CF125D6E4B30077264D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50994CF325D6E4B30077264D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				50994CFF25D6E4B50077264D /* LaunchScreen.storyboard */,
 				50994D0225D6E4B50077264D /* Info.plist */,
 				50994CFA25D6E4B30077264D /* mercury.xcdatamodeld */,
+				505F271525DD384700D675CA /* DefinitionTableViewCell.swift */,
 			);
 			path = mercury;
 			sourceTree = "<group>";
@@ -105,7 +108,6 @@
 				D6099FC7564851B939FDC12F /* Pods-mercury.debug.xcconfig */,
 				D2ECF3C3E13E11C8AECE11D4 /* Pods-mercury.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -120,7 +122,6 @@
 				50994CEA25D6E4B30077264D /* Sources */,
 				50994CEB25D6E4B30077264D /* Frameworks */,
 				50994CEC25D6E4B30077264D /* Resources */,
-				42E8D1B8801EDC34286DD2D1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,23 +180,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		42E8D1B8801EDC34286DD2D1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E0E33E38D439EAF9D29793F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,6 +211,7 @@
 			files = (
 				50994CF625D6E4B30077264D /* ViewController.swift in Sources */,
 				50994CF225D6E4B30077264D /* AppDelegate.swift in Sources */,
+				505F271625DD384700D675CA /* DefinitionTableViewCell.swift in Sources */,
 				50994CF425D6E4B30077264D /* SceneDelegate.swift in Sources */,
 				50994CFC25D6E4B30077264D /* mercury.xcdatamodeld in Sources */,
 			);
