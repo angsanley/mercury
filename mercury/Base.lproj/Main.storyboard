@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hW8-RS-NP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4" y="-300"/>
+            <point key="canvasLocation" x="1839" y="825"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="8Jh-0K-vWU">
@@ -223,20 +223,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AP-BM-jJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2710" y="-343"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ybp-Aa-1fR">
-            <objects>
-                <viewController id="CJc-jA-hrE" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NUR-U3-6Q7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="s5r-Eu-W2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="645" y="825"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
