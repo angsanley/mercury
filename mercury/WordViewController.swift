@@ -7,6 +7,7 @@
 
 import UIKit
 import SkeletonView
+import Kingfisher
 
 class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
     
@@ -23,6 +24,9 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
+        tableView.isHidden = true
+        
+        loadWord(word: theWord)
     }
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
@@ -30,7 +34,11 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if definitions.count > 0 {
+            return definitions.count
+        } else {
+            return 3
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,11 +46,47 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         
         cell.showLoadingAnimation()
         
+        if definitions.count > 0 {
+            cell.setType(type: definitions[indexPath.row].type)
+            cell.setDefinition(definition: definitions[indexPath.row].definition)
+            
+            let resource = ImageResource(downloadURL: URL.init(string: definitions[indexPath.row].imageUrl) ?? URL.init(string: "#")!)
+
+            KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
+                switch result {
+                    case .success(let value):
+                        print("Image: \(value.image). Got from: \(value.cacheType)")
+                        
+                        cell.setFoto(foto: value.image)
+                        
+                    case .failure(let error):
+                        print("Error: \(error)")
+                }
+            }
+            
+            
+            cell.hideLoadingAnimation()
+        }
+        
         return cell
     }
     
     public func loadWord(word: String) {
         theWord = word
         titleText.text = theWord
+        
+        if theWord.count > 0 {
+            tableView.isHidden = false
+        }
+        
+        tableView.reloadData()
+    }
+    
+    public func setWord(word: String) {
+        theWord = word
+    }
+    
+    public func setDefinitions(definitions: [Definition]) {
+        self.definitions = definitions
     }
 }

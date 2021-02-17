@@ -9,6 +9,7 @@ import UIKit
 import SkeletonView
 import SwipeMenuViewController
 import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UISearchBarDelegate {
     
@@ -17,6 +18,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     let API_URL = "https://myawesomedictionary.herokuapp.com/words"
 
+    var words: [Word] = []
     
     var wordViewController: WordViewController? = nil
     
@@ -42,13 +44,41 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchWord(text: String) {
-        let request = AF.request(API_URL, parameters: ["q": "app"])
+        // reset
+        self.words = []
+              
+        // request api
+        AF.request(API_URL, parameters: ["q": text])
           .validate(statusCode: 200..<300)
           .validate(contentType: ["application/json"])
-        
-        request.responseJSON { (data) in
-            print(data[""])
-        }
+            .response{ response in
+                switch response.result {
+                    case .success(let value):
+                        let json = JSON(value!)
+                        
+                        for word in json.arrayValue {
+                            let theWord = word["word"]
+                            let definitionJson = JSON(word["definitions"])
+                            
+                            var definitions: [Definition] = []
+                            
+                            for definition in definitionJson.arrayValue {
+                                definitions.append(Definition(imageUrl: definition["image_url"].stringValue, type: definition["type"].stringValue, definition: definition["definition"].stringValue))
+                            }
+                            
+                            self.words.append(Word(word: theWord.stringValue, definitions: definitions))
+                            
+                            self.swipeMenuView.reloadData()
+                        }
+                        
+                        
+                        
+//                        print("JSON: \(json[0]["word"])")
+                        
+                    case .failure(let error):
+                        print(error)
+                    }
+            }
     }
 }
 
@@ -76,17 +106,31 @@ extension ViewController: SwipeMenuViewDataSource {
 
     //MARK - SwipeMenuViewDataSource
     func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {
-        return 1
+        if words.count > 0 {
+            return words.count
+        } else {
+            return 1
+        }
     }
 
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String {
-        return "Test"
+        if self.words.count > index {
+            return self.words[index].word
+        } else {
+            return "Hello!"
+        }
     }
 
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "WordViewController") as! WordViewController
+        
+        if self.words.count > index {
+            vc.setWord(word: self.words[index].word)
+            vc.setDefinitions(definitions: self.words[index].definitions)
+        }
+        
         
         return vc
     }
