@@ -134,6 +134,7 @@
 				50994CEA25D6E4B30077264D /* Sources */,
 				50994CEB25D6E4B30077264D /* Frameworks */,
 				50994CEC25D6E4B30077264D /* Resources */,
+				17E2451FE24E1DA96262629C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,6 +193,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		17E2451FE24E1DA96262629C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mercury/Pods-mercury-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E0E33E38D439EAF9D29793F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

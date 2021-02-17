@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upS-8H-9kp">
-                                <rect key="frame" x="20" y="68" width="374" height="32"/>
+                                <rect key="frame" x="20" y="68" width="314" height="32"/>
                                 <fontDescription key="fontDescription" name="Newsreader-Regular" family="Newsreader" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -202,27 +202,39 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsL-Li-7uD" customClass="SweetLike" customModule="SweetLike">
+                                <rect key="frame" x="358" y="68" width="32" height="32"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="9Rb-7Z-YUZ"/>
+                                    <constraint firstAttribute="height" constant="32" id="V4p-5E-lat"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CVC-El-Csv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="JsL-Li-7uD" firstAttribute="leading" secondItem="upS-8H-9kp" secondAttribute="trailing" constant="24" id="1gi-R8-YQc"/>
                             <constraint firstItem="GQ3-bu-Ujd" firstAttribute="top" secondItem="upS-8H-9kp" secondAttribute="bottom" constant="24" id="3sN-ld-fV9"/>
                             <constraint firstItem="upS-8H-9kp" firstAttribute="leading" secondItem="39x-6e-r85" secondAttribute="leadingMargin" id="6IL-rc-DOe"/>
+                            <constraint firstItem="CVC-El-Csv" firstAttribute="trailing" secondItem="JsL-Li-7uD" secondAttribute="trailing" constant="24" id="C4H-lp-RRw"/>
+                            <constraint firstItem="JsL-Li-7uD" firstAttribute="top" secondItem="CVC-El-Csv" secondAttribute="top" constant="24" id="G1M-iF-Wzt"/>
                             <constraint firstAttribute="trailing" secondItem="GQ3-bu-Ujd" secondAttribute="trailing" id="QAR-GK-Qe9"/>
+                            <constraint firstItem="GQ3-bu-Ujd" firstAttribute="top" secondItem="JsL-Li-7uD" secondAttribute="bottom" constant="24" id="h36-1l-EPa"/>
                             <constraint firstItem="upS-8H-9kp" firstAttribute="top" secondItem="39x-6e-r85" secondAttribute="topMargin" constant="24" id="hMD-Zg-Y66"/>
                             <constraint firstItem="GQ3-bu-Ujd" firstAttribute="leading" secondItem="39x-6e-r85" secondAttribute="leading" id="oTc-Ma-KBi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="upS-8H-9kp" secondAttribute="trailing" id="x4N-sf-o0N"/>
                             <constraint firstAttribute="bottom" secondItem="GQ3-bu-Ujd" secondAttribute="bottom" id="xVY-yZ-3Rg"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="likeButton" destination="JsL-Li-7uD" id="1nt-sG-A6q"/>
                         <outlet property="tableView" destination="GQ3-bu-Ujd" id="P3V-uJ-PvZ"/>
                         <outlet property="titleText" destination="upS-8H-9kp" id="5mO-ma-e6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AP-BM-jJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2710" y="-343"/>
+            <point key="canvasLocation" x="2708.6956521739135" y="-343.19196428571428"/>
         </scene>
     </scenes>
     <resources>

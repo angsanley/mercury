@@ -17,6 +17,7 @@ PODS:
   - Alamofire (5.4.1)
   - Kingfisher (6.1.1)
   - SkeletonView (1.13.0)
+  - SweetLike (1.0.0)
   - SwiftyJSON (4.3.0)
   - SwipeMenuViewController (4.1.0)
 
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - Kingfisher (~> 6.0)
   - SkeletonView
+  - SweetLike
   - SwiftyJSON (~> 4.0)
   - SwipeMenuViewController
 
@@ -34,6 +36,7 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
     - SkeletonView
+    - SweetLike
     - SwiftyJSON
     - SwipeMenuViewController
 
@@ -42,9 +45,10 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
   SkeletonView: 2b14cb767a7da384d17d5d7e1db0d55a6cf9566a
+  SweetLike: 19d2d18ad13fd9839154a12b6c43e954feb39017
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwipeMenuViewController: 94fac81cc192d9f08f218fe4c0c853569b735e1f
 
-PODFILE CHECKSUM: 683810acba9b34a78849a946da8611824f74bcdc
+PODFILE CHECKSUM: a9b3b367ff8bf8bfd6c975253426606484bcbb4a
 
 COCOAPODS: 1.9.3

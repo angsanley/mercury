@@ -8,11 +8,14 @@
 import UIKit
 import SkeletonView
 import Kingfisher
+import SweetLike
 
-class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
+class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource, SweetLikeDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleText: UILabel!
+    @IBOutlet weak var likeButton: SweetLike!
+    
     var theWord: String = ""
     var definitions: [Definition] = []
     
@@ -26,8 +29,20 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         tableView.estimatedRowHeight = 300
         tableView.isHidden = true
         
+        likeButton.isHidden = true
+        likeButton.delegate = self
+        
         loadWord(word: theWord)
     }
+    
+    func likeAction() {
+        
+    }
+    
+    func unlikeAction() {
+        
+    }
+    
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "DefinitionCell"
@@ -77,6 +92,7 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         
         if theWord.count > 0 {
             tableView.isHidden = false
+            likeButton.isHidden = false
         }
         
         tableView.reloadData()
