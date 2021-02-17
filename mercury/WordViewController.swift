@@ -9,6 +9,7 @@ import UIKit
 import SkeletonView
 import Kingfisher
 import SweetLike
+import CoreData
 
 class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource, SweetLikeDelegate {
     
@@ -36,11 +37,47 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
     }
     
     func likeAction() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: context)
+        
+        let newItem = NSManagedObject(entity: entity!, insertInto: context)
+        
+        newItem.setValue(theWord, forKey: "word")
+        
+        do {
+            try context.save()
+        } catch {
+            print("assdasdasdasd")
+        }
     }
     
     func unlikeAction() {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
+        
+        var res = [NSManagedObject]()
+         
+        do {
+            res = try context.fetch(req as! NSFetchRequest<NSManagedObject>)
+        } catch {
+            print("assdasdasdasd")
+        }
+        
+        for el in res {
+            if (el.value(forKeyPath: "word") as! String == theWord) {
+                
+                context.delete(el)
+            }
+        }
+        
+        
+        do {
+            try context.save()
+        } catch {
+            print("assdasdasdasd")
+        }
     }
     
     
@@ -96,6 +133,26 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         }
         
         tableView.reloadData()
+        
+        // check if liked
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let req = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
+        
+        var res = [NSManagedObject]()
+         
+        do {
+            res = try context.fetch(req as! NSFetchRequest<NSManagedObject>)
+        } catch {
+            print("assdasdasdasd")
+        }
+        
+        for el in res {
+            if (el.value(forKeyPath: "word") as! String == theWord) {
+                
+                likeButton.setStatus(SweetLikeStatus.liked)
+            }
+        }
     }
     
     public func setWord(word: String) {

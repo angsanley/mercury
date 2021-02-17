@@ -15,7 +15,7 @@ class RandomWordViewController: UIViewController {
     
     var wordViewController: WordViewController! = nil
     var words: [Word] = []
-    var wordsDict = ["Entrance", "Entry", "Book", "Happiness", "Joke", "Leader", "Cart", "Neat", "Root", "Salt"]
+    var wordsDict = ["entrance", "entry", "book", "happiness", "joke", "leader", "cart", "neat", "root", "salt"]
     
     var selectedWord: String = ""
 
