@@ -34,9 +34,12 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         likeButton.delegate = self
         
         loadWord(word: theWord)
+        
+        print("auo")
     }
     
     func likeAction() {
+        unlike(word: theWord)
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: context)
@@ -53,6 +56,10 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
     }
     
     func unlikeAction() {
+        unlike(word: theWord)
+    }
+    
+    func unlike(word: String) {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let req = NSFetchRequest<NSFetchRequestResult>(entityName: "Favorites")
@@ -66,7 +73,7 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         }
         
         for el in res {
-            if (el.value(forKeyPath: "word") as! String == theWord) {
+            if (el.value(forKeyPath: "word") as! String == word) {
                 
                 context.delete(el)
             }
@@ -79,6 +86,7 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
             print("assdasdasdasd")
         }
     }
+    
     
     
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {

@@ -59,14 +59,30 @@
         <!--Favorite Words-->
         <scene sceneID="CV1-4Y-Kpa">
             <objects>
-                <viewController title="Favorite Words" id="jcn-75-SWQ" sceneMemberID="viewController">
+                <viewController title="Favorite Words" id="jcn-75-SWQ" customClass="FavoriteViewController" customModule="mercury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y3r-bI-fsn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xNJ-gk-aR4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2B9-8J-vy5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xNJ-gk-aR4" firstAttribute="top" secondItem="2B9-8J-vy5" secondAttribute="top" id="0JX-va-zDt"/>
+                            <constraint firstItem="xNJ-gk-aR4" firstAttribute="leading" secondItem="2B9-8J-vy5" secondAttribute="leading" id="Qs5-at-z01"/>
+                            <constraint firstItem="2B9-8J-vy5" firstAttribute="bottom" secondItem="xNJ-gk-aR4" secondAttribute="bottom" id="RoG-Pw-VG5"/>
+                            <constraint firstItem="2B9-8J-vy5" firstAttribute="trailing" secondItem="xNJ-gk-aR4" secondAttribute="trailing" id="Z6Y-03-VRD"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite Words" image="heart" catalog="system" id="9f3-SO-fMO"/>
+                    <connections>
+                        <outlet property="tableView" destination="xNJ-gk-aR4" id="1Dh-10-6Iw"/>
+                        <segue destination="WAa-op-ic7" kind="show" identifier="ShowWordSegue" id="MOC-zl-8bu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9x-g8-lXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,11 +143,11 @@
             <objects>
                 <viewController storyboardIdentifier="WordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WAa-op-ic7" customClass="WordViewController" customModule="mercury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="39x-6e-r85">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upS-8H-9kp">
-                                <rect key="frame" x="20" y="68" width="314" height="32"/>
+                                <rect key="frame" x="20" y="24" width="314" height="32"/>
                                 <fontDescription key="fontDescription" name="Newsreader-Regular" family="Newsreader" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -140,7 +156,7 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GQ3-bu-Ujd">
-                                <rect key="frame" x="0.0" y="124" width="414" height="645"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="762"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DefinitionCell" rowHeight="231" id="Z2u-yt-G9a" customClass="DefinitionTableViewCell" customModule="mercury" customModuleProvider="target">
@@ -203,7 +219,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsL-Li-7uD" customClass="SweetLike" customModule="SweetLike">
-                                <rect key="frame" x="358" y="68" width="32" height="32"/>
+                                <rect key="frame" x="358" y="24" width="32" height="32"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="9Rb-7Z-YUZ"/>
@@ -226,6 +242,7 @@
                             <constraint firstAttribute="bottom" secondItem="GQ3-bu-Ujd" secondAttribute="bottom" id="xVY-yZ-3Rg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Y3P-YG-uT7"/>
                     <connections>
                         <outlet property="likeButton" destination="JsL-Li-7uD" id="1nt-sG-A6q"/>
                         <outlet property="tableView" destination="GQ3-bu-Ujd" id="P3V-uJ-PvZ"/>
@@ -237,6 +254,9 @@
             <point key="canvasLocation" x="2708.6956521739135" y="-343.19196428571428"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MOC-zl-8bu"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		505F271625DD384700D675CA /* DefinitionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505F271525DD384700D675CA /* DefinitionTableViewCell.swift */; };
 		509319C725DD932300F2B254 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509319C625DD932300F2B254 /* Word.swift */; };
 		509319CA25DD933300F2B254 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509319C925DD933300F2B254 /* Definition.swift */; };
+		50931A1025DDB5CB00F2B254 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50931A0F25DDB5CB00F2B254 /* FavoriteViewController.swift */; };
 		50994CF225D6E4B30077264D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF125D6E4B30077264D /* AppDelegate.swift */; };
 		50994CF425D6E4B30077264D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF325D6E4B30077264D /* SceneDelegate.swift */; };
 		50994CF625D6E4B30077264D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50994CF525D6E4B30077264D /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 		505F271525DD384700D675CA /* DefinitionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionTableViewCell.swift; sourceTree = "<group>"; };
 		509319C625DD932300F2B254 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		509319C925DD933300F2B254 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		50931A0F25DDB5CB00F2B254 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		50994CEE25D6E4B30077264D /* mercury.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mercury.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50994CF125D6E4B30077264D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50994CF325D6E4B30077264D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				503DF84425DAB91B00418325 /* RandomWordViewController.swift */,
 				509319C625DD932300F2B254 /* Word.swift */,
 				509319C925DD933300F2B254 /* Definition.swift */,
+				50931A0F25DDB5CB00F2B254 /* FavoriteViewController.swift */,
 			);
 			path = mercury;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				509319CA25DD933300F2B254 /* Definition.swift in Sources */,
 				509319C725DD932300F2B254 /* Word.swift in Sources */,
 				50994CF625D6E4B30077264D /* ViewController.swift in Sources */,
+				50931A1025DDB5CB00F2B254 /* FavoriteViewController.swift in Sources */,
 				503DF84525DAB91B00418325 /* RandomWordViewController.swift in Sources */,
 				50994CF225D6E4B30077264D /* AppDelegate.swift in Sources */,
 				505F271625DD384700D675CA /* DefinitionTableViewCell.swift in Sources */,
