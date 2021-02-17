@@ -13,6 +13,7 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleText: UILabel!
     var theWord: String = ""
+    var definitions: [Definition] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +23,8 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
-        tableView.isHidden = true
-        
-
     }
+    
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "DefinitionCell"
     }
@@ -43,7 +42,6 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
     }
     
     public func loadWord(word: String) {
-        tableView.isHidden = false
         theWord = word
         titleText.text = theWord
     }

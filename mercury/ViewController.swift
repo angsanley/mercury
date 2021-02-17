@@ -8,12 +8,15 @@
 import UIKit
 import SkeletonView
 import SwipeMenuViewController
+import Alamofire
 
 class ViewController: UIViewController, UISearchBarDelegate {
     
-    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var swipeMenuView: SwipeMenuView!
+    
+    let API_URL = "https://myawesomedictionary.herokuapp.com/words"
+
     
     var wordViewController: WordViewController? = nil
     
@@ -39,6 +42,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchWord(text: String) {
+        let request = AF.request(API_URL, parameters: ["q": "app"])
+          .validate(statusCode: 200..<300)
+          .validate(contentType: ["application/json"])
+        
+        request.responseJSON { (data) in
+            print(data[""])
+        }
     }
 }
 
@@ -66,7 +76,7 @@ extension ViewController: SwipeMenuViewDataSource {
 
     //MARK - SwipeMenuViewDataSource
     func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {
-        return 5
+        return 1
     }
 
     func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String {

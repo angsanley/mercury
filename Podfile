@@ -3,4 +3,5 @@ target 'mercury' do
   pod 'SkeletonView'
   pod 'Alamofire', '~> 5.2'
   pod 'SwipeMenuViewController'
+  pod 'SwiftyJSON', '~> 4.0'
 end
