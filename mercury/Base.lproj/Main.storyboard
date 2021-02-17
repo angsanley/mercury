@@ -28,21 +28,19 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="search"/>
                             </searchBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4yD-tU-md0">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYl-GT-DPj" customClass="SwipeMenuView" customModule="SwipeMenuViewController">
                                 <rect key="frame" x="0.0" y="104" width="414" height="709"/>
-                                <connections>
-                                    <segue destination="WAa-op-ic7" kind="embed" identifier="wordContainerSegue" id="7eo-sF-yXg"/>
-                                </connections>
-                            </containerView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4yD-tU-md0" firstAttribute="top" secondItem="mRZ-lv-TRb" secondAttribute="bottom" id="2g3-0T-KzE"/>
+                            <constraint firstItem="ZYl-GT-DPj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gzy-6z-De9"/>
+                            <constraint firstItem="ZYl-GT-DPj" firstAttribute="top" secondItem="mRZ-lv-TRb" secondAttribute="bottom" id="IwB-5j-HKe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZYl-GT-DPj" secondAttribute="bottom" id="N3o-Eg-ppD"/>
                             <constraint firstItem="mRZ-lv-TRb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gHj-HY-hDb"/>
-                            <constraint firstItem="4yD-tU-md0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qTO-37-IR3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4yD-tU-md0" secondAttribute="bottom" id="sf3-0Y-xqp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4yD-tU-md0" secondAttribute="trailing" id="uQU-4D-Nau"/>
+                            <constraint firstItem="ZYl-GT-DPj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uIW-lg-4bJ"/>
                             <constraint firstItem="mRZ-lv-TRb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="uoF-Th-Guw"/>
                             <constraint firstItem="mRZ-lv-TRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vUw-RU-cwo"/>
                         </constraints>
@@ -50,8 +48,8 @@
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="GUd-6p-JKp"/>
                     <navigationItem key="navigationItem" id="D8U-wV-Ggu"/>
                     <connections>
-                        <outlet property="containerView" destination="4yD-tU-md0" id="tHw-RM-C2X"/>
                         <outlet property="searchBar" destination="mRZ-lv-TRb" id="hRn-1b-UnQ"/>
+                        <outlet property="swipeMenuView" destination="ZYl-GT-DPj" id="yjI-ka-vZL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -127,7 +125,7 @@
         <!--Word View Controller-->
         <scene sceneID="Rzw-Hc-Jr4">
             <objects>
-                <viewController id="WAa-op-ic7" customClass="WordViewController" customModule="mercury" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WordViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WAa-op-ic7" customClass="WordViewController" customModule="mercury" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="39x-6e-r85">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,6 +203,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="CVC-El-Csv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GQ3-bu-Ujd" firstAttribute="top" secondItem="upS-8H-9kp" secondAttribute="bottom" constant="24" id="3sN-ld-fV9"/>
@@ -226,9 +225,6 @@
             <point key="canvasLocation" x="2710" y="-343"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="FZF-Og-ycF"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>

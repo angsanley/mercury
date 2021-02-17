@@ -14,21 +14,29 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
+  - Alamofire (5.4.1)
   - SkeletonView (1.13.0)
+  - SwipeMenuViewController (4.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - Alamofire (~> 5.2)
   - SkeletonView
+  - SwipeMenuViewController
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - Alamofire
     - SkeletonView
+    - SwipeMenuViewController
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   SkeletonView: 2b14cb767a7da384d17d5d7e1db0d55a6cf9566a
+  SwipeMenuViewController: 94fac81cc192d9f08f218fe4c0c853569b735e1f
 
-PODFILE CHECKSUM: d5fa24d907de1c312cf42f3826e5c30ca1fa67a3
+PODFILE CHECKSUM: 2410cad93c73b13fd964bbf605c3db0ed914e858
 
 COCOAPODS: 1.9.3

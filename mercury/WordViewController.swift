@@ -17,6 +17,7 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension

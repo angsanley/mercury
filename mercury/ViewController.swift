@@ -7,12 +7,14 @@
 
 import UIKit
 import SkeletonView
+import SwipeMenuViewController
 
 class ViewController: UIViewController, UISearchBarDelegate {
     
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var swipeMenuView: SwipeMenuView!
+    
     var wordViewController: WordViewController? = nil
     
     override func viewDidLoad() {
@@ -20,13 +22,12 @@ class ViewController: UIViewController, UISearchBarDelegate {
         // Do any additional setup after loading the view.
         searchBar.delegate = self
         
-        wordViewController = children[0] as? WordViewController
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "wordContainerSegue") {
-//            let view = segue.destination as! WordViewController
-        }
+        swipeMenuView.dataSource = self
+        swipeMenuView.delegate = self
+
+        let options: SwipeMenuViewOptions = .init()
+
+        swipeMenuView.reloadData(options: options)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -38,6 +39,45 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchWord(text: String) {
-        wordViewController?.loadWord(word: text)
+    }
+}
+
+extension ViewController: SwipeMenuViewDelegate {
+
+    // MARK - SwipeMenuViewDelegate
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewWillSetupAt currentIndex: Int) {
+        // Codes
+    }
+
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewDidSetupAt currentIndex: Int) {
+        // Codes
+    }
+
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, willChangeIndexFrom fromIndex: Int, to toIndex: Int) {
+        // Codes
+    }
+
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, didChangeIndexFrom fromIndex: Int, to toIndex: Int) {
+        // Codes
+    }
+}
+
+extension ViewController: SwipeMenuViewDataSource {
+
+    //MARK - SwipeMenuViewDataSource
+    func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int {
+        return 5
+    }
+
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String {
+        return "Test"
+    }
+
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> UIViewController {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "WordViewController") as! WordViewController
+        
+        return vc
     }
 }
