@@ -13,14 +13,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var containerView: UIView!
-    var wordViewController: WordViewController? = nil
+    var resultViewController: ResultViewController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         searchBar.delegate = self
         
-        wordViewController = children[0] as? WordViewController
+        resultViewController = children[0] as? ResultViewController
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,11 +33,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
         if searchBar.text!.count >= 3 {
             searchWord(text: searchBar.text!)
         } else {
-            
+            // handle error
         }
     }
     
     func searchWord(text: String) {
-        wordViewController?.loadWord(word: text)
+//        wordViewController?.loadWord(word: text)
     }
 }

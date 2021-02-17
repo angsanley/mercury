@@ -9,7 +9,7 @@ import UIKit
 
 class RandomWordViewController: UIViewController {
     
-    var wordViewController: WordViewController! = nil
+    var resultViewController: ResultViewController! = nil
     var words = ["Entrance", "Entry", "Book", "Happiness", "Joke", "Leader", "Cart", "Neat", "Root", "Salt"]
     
     var selectedWord: String = ""
@@ -18,11 +18,11 @@ class RandomWordViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        wordViewController = children[0] as? WordViewController
+        resultViewController = children[0] as? ResultViewController
         
         selectedWord = words[Int.random(in: 0..<10)]
         
-        wordViewController.loadWord(word: selectedWord)
+//        wordViewController.loadWord(word: selectedWord)
     }
 
 }

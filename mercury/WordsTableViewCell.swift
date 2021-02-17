@@ -7,24 +7,30 @@
 
 import UIKit
 import SkeletonView
+import Alamofire
 
-class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableViewDataSource {
+class WordsTableViewCell: UITableViewCell, UITableViewDelegate, SkeletonTableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleText: UILabel!
     var theWord: String = ""
+    let API_URL: String = "https://myawesomedictionary.herokuapp.com/words?q="
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    struct Definition {
+        
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 300
         tableView.isHidden = true
-        
-
     }
+
+    
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return "DefinitionCell"
     }
@@ -45,5 +51,8 @@ class WordViewController: UIViewController, UITableViewDelegate, SkeletonTableVi
         tableView.isHidden = false
         theWord = word
         titleText.text = theWord
+        AF.request("\(API_URL)\(theWord)").response { response in
+            debugPrint(response)
+        }
     }
 }
